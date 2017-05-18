@@ -1,6 +1,6 @@
 {
   "name": "iMDb link ref remover",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
   "description": "This extension automatically removes \\?ref.* from imdb pages",
   "content_scripts": [
@@ -9,8 +9,9 @@
         "*://www.imdb.com/*"
       ],
       "js": [
-        "content-script.js"
-      ]
+         "jquery-2.2.4.min.js", "content-script.js"
+      ],
+      "run_at": "document_end"
     }
   ],
   "permissions": [
